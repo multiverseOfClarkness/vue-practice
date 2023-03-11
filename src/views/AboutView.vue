@@ -1,10 +1,6 @@
 <script>
   export default {
-    data() {
-      return {
-        count: 'This is about'
-      }
-    },
+    
     props: {
       name: {
         type: String,
@@ -185,7 +181,7 @@
   color: #333;
   text-align: justify;
   margin: 20px 0;
-  color: hsla(160, 100%, 37%, 1);;
+  color: hsla(160, 100%, 37%, 1);
 }
 
 .label {

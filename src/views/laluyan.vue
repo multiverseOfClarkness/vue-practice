@@ -1,9 +1,9 @@
 <script>
-  import count from './AboutView.vue'
+  import MemberInfo from './AboutView.vue'
 
   export default {
     components: {
-      count
+      MemberInfo
     }
   }
 </script>
@@ -11,7 +11,7 @@
 
 <template>
   
-  <count 
+  <MemberInfo 
   name="Aliyah Mae Laluyan" 
   imagesrc="src/assets/laluyan.jpg" 
   interest="Coffee" 

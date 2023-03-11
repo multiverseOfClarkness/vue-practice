@@ -41,6 +41,11 @@ const router = createRouter({
       path: '/rayos',
       name: 'rayos',
       component: () => import('../views/rayos.vue')
+    },
+    {
+      path: '/add',
+      name: 'add',
+      component: () => import('../views/addmember.vue')
     }
   ]
 })

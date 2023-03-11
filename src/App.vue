@@ -17,6 +17,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/maaba">Maaba</RouterLink>
         <RouterLink to="/orcega">Orcega</RouterLink>
         <RouterLink to="/rayos">Rayos</RouterLink>
+        <RouterLink to="/add">Add Member</RouterLink>
         
       </nav>
     </div>
