@@ -15,9 +15,11 @@
             <input type="text" placeholder="Preferred type of job">
             <input type="text" placeholder="Talent">
             <input type="text" placeholder="Bible verse">
-        </form>
 
             <button type="submit">Submit</button>
+        </form>
+
+            
         </div>
     </div>
     
@@ -63,11 +65,14 @@ input::placeholder {
     position: relative;
 }
 
-button {
+.form-field button {
     border-radius: 5px;
     font-size: 18px;
     padding: 10px;
     background-color: hsla(160, 100%, 37%, 1);
+    position: absolute;
+    top: 100%;
+    right: 25%;
 }
 
 button:hover {
