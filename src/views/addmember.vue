@@ -1,20 +1,110 @@
+<script>
+export default {
+    data() {
+        return {
+            name: '',
+            interest: '',
+            color: '',
+            food: '',
+            religion: '',
+            pasttime: '',
+            sport: '',
+            fear: '',
+            job: '',
+            talent: '',
+            bibleverse: '',
+        }
+    },
+    methods: {
+        nameInput (e) {
+            this.name = e.target.value
+        },
+        interestInput (e) {
+            this.interest = e.target.value
+        },
+        colorInput (e) {
+            this.color = e.target.value
+        },
+        foodInput (e) {
+            this.food = e.target.value
+        },
+        religionInput (e) {
+            this.religion = e.target.value
+        },
+        pasttimeInput (e) {
+            this.pasttime = e.target.value
+        },
+        sportInput (e) {
+            this.sport = e.target.value
+        },
+        fearInput (e) {
+            this.fear = e.target.value
+        },
+        jobInput (e) {
+            this.job = e.target.value
+        },
+        talentInput (e) {
+            this.talent = e.target.value
+        },
+        bibleverseInput (e) {
+            this.bibleverse = e.target.value
+        },
+    }
+}
+
+</script>
+
 <template>
     <div class="add">
         <div class="form-field">
         <h1>ADD NEW MEMBER</h1>
 
-        <form action="">
-            <input type="text" placeholder="Member name">
-            <input type="text" placeholder="Interest">
-            <input type="text" placeholder="Favorite color">
-            <input type="text" placeholder="Favorite food">
-            <input type="text" placeholder="Religion">
-            <input type="text" placeholder="Past-time">
-            <input type="text" placeholder="Sport">
-            <input type="text" placeholder="Fear">
-            <input type="text" placeholder="Preferred type of job">
-            <input type="text" placeholder="Talent">
-            <input type="text" placeholder="Bible verse">
+        <form method="get" action="">
+            <div class="input-wrapper">
+                <input v-model="name" @input="nameInput" placeholder="Member name">
+                <p>{{ name }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="interest" @input="interestInput" placeholder="Interest">
+                <p>{{ interest }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="color" @input="colorInput" placeholder="Color">
+                <p>{{ color }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="food" @input="foodInput" placeholder="Favorite food">
+                <p>{{ food }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="religion" @input="religionInput" placeholder="Religion">
+                <p>{{ religion }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="pasttime" @input="pasttimeInput" placeholder="Past time">
+                <p>{{ pasttime }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="sport" @input="sportInput" placeholder="Sport">
+                <p>{{ sport }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="fear" @input="fearInput" placeholder="Fear">
+                <p>{{ fear }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="job" @input="jobInput" placeholder="Job">
+                <p>{{ job }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="talent" @input="talentInput" placeholder="Talent">
+                <p>{{ talent }}</p>
+            </div>
+            <div class="input-wrapper">
+                <input v-model="bibleverse" @input="bibleverseInput" placeholder="Bible verse">
+                <p>{{ bibleverse }}</p>
+            </div>
+            
 
             <button type="submit">Submit</button>
         </form>
@@ -38,7 +128,6 @@ input {
     padding: 10px;
     margin: 10px;
     color: hsla(160, 100%, 37%, 1);
-    
 }
 
 input::placeholder {
@@ -72,7 +161,7 @@ input::placeholder {
     background-color: hsla(160, 100%, 37%, 1);
     position: absolute;
     top: 100%;
-    right: 25%;
+    left: 23%;
 }
 
 button:hover {
@@ -84,6 +173,17 @@ button:active {
   background-color: #126A3F;
 }
 
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.input-wrapper p {
+    margin-left: 10px;
+    font-size: 18px;
+    color: hsla(160, 100%, 37%, 1);
+}
 
 
 </style>
