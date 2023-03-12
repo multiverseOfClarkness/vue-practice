@@ -18,6 +18,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/orcega">Orcega</RouterLink>
         <RouterLink to="/rayos">Rayos</RouterLink>
         <RouterLink to="/add">Add Member</RouterLink>
+        <RouterLink to="/list">List form</RouterLink>
         
       </nav>
     </div>
