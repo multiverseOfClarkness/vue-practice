@@ -1,6 +1,10 @@
 <script>
   export default {
-    
+    data() {
+      return {
+        count: 0
+      }
+    },
     props: {
       name: {
         type: String,
@@ -50,6 +54,16 @@
         type: String,
         required: true
       }
+    },
+    methods: {
+      like() {
+        this.count++
+      },
+
+      dislike() {
+        this.count--
+      }
+
     }
   }
 </script>
@@ -61,10 +75,25 @@
       <div class="icon-logo">
         <img :src="imagesrc" alt="" >
       </div>
+
+      <div >
+        <button @click="like" class="my-button">
+          <img src="../assets/like.png" alt="">
+        </button>
+        <button @click="dislike" class="my-button">
+          <img src="../assets/dislike.png" alt="">
+        </button>
+      </div>
       
       
       <h1>{{ name }}</h1>
-
+      
+      <p>
+        <span class="label">Likes: </span>  
+        <span class="content">
+          {{ count }}
+        </span>
+      </p>
       <p>
         <span class="label">Interest: </span>  
         <span class="content">
@@ -138,6 +167,33 @@
 </template>
 
 <style >
+
+.my-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  left: 42%;
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.my-button img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.my-button:hover img {
+  filter: brightness(80%);
+}
+
 .about{
   margin-top: 2rem;
   display: flex;
@@ -164,7 +220,7 @@
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: 2px solid   hsla(160, 100%, 37%, 1);
+  border: 5px solid   hsla(160, 100%, 37%, 1);
   top: 0;
   left: 40%;
   
@@ -192,6 +248,25 @@
   font-style: italic;
 }
 
+
+.buttons img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  left: 43%;
+  
+}
+.buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  
+}
 
 @media (min-width: 1024px) {
   .about {
