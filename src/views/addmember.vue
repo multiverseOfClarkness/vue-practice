@@ -13,6 +13,7 @@ export default {
             job: '',
             talent: '',
             bibleverse: '',
+            imageUrl: ''
         }
     },
     methods: {
@@ -49,6 +50,10 @@ export default {
         bibleverseInput (e) {
             this.bibleverse = e.target.value
         },
+        handleFileUpload(event) {
+            const file = event.target.files[0]
+            this.imageUrl = URL.createObjectURL(file)
+        }
     }
 }
 
@@ -104,7 +109,10 @@ export default {
                 <input v-model="bibleverse" @input="bibleverseInput" placeholder="Bible verse">
                 <p>{{ bibleverse }}</p>
             </div>
-            
+            <div class="input-wrapper">
+                <input type="file" @change="handleFileUpload">
+                <img :src="imageUrl" alt="">
+            </div>
 
             <button type="submit">Submit</button>
         </form>
@@ -185,5 +193,17 @@ button:active {
     color: hsla(160, 100%, 37%, 1);
 }
 
+.input-wrapper img{
+    
+    position: relative;
+    object-fit: cover;
+    width: 130px;
+    height: 130px;
+    border: none;
+    border-radius: 50%;
+    border: 2px solid   hsla(160, 100%, 37%, 1);
+    top: 0;
+    left: 10%;
+}
 
 </style>
